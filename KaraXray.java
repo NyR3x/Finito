@@ -1,42 +1,18 @@
-public class KaraXray {
-    private void narise_vrstice(int sirina, int i)
-    {
-        for (int j = 1; j <= sirina - i-1; j++)
-        {
+import java.util.Scanner;
+public class KaraXray extends Kara
+   {
+    public void narisi_vrstico(int stevilo_presledkov, int stevilo_zvezdic, int maxZvezdic) {
+        for (int i = 1; i <= stevilo_presledkov; i++)
             System.out.print(" ");
+        for (int i = 1; i <= stevilo_zvezdic; i++) {
+            if ( (i == 1 || i == stevilo_zvezdic)) {
+                System.out.print("*");
+            } else
+                System.out.print(" ");
         }
-        System.out.print("*");
 
-        for (int k = 1; k <= i * 2 - 1; k++)
-        {
-            System.out.print(" ");
-        }
-        if(i!=0)
-        {
-            System.out.print("*");
-        }
         System.out.println();
     }
- private void izris(int sirina)
- {
 
-
-     for (int i = 0; i <= sirina - 2; i++)
-     {
-         narise_vrstice(sirina, i);
-     }
-     System.out.print("*");
-     for (int i = 1; i <= (sirina - 1) * 2 - 1; i++)
-     {
-         System.out.print(" ");
-     }
-     System.out.print("*");
-     System.out.println();
-
-     for (int i = sirina - 2; i >= 0; i--)
-     {
-         narise_vrstice(sirina, i);
-     }
-
- }
 }
+
